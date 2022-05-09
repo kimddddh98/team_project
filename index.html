@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everland</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jsp/main.js"></script>
+</head>
+<body>
+<div id="video">
+    <video muted  autoplay id="vi"><source src="img/video.mp4"></video>
+    <div id="tex">
+        <h1>T-익스프레스</h1>
+        <h3>최고 속도!최고 각도! 세계 최고 우든 코스터</h3>
+        <a href="#">이용권 구매하기</a>
+    </div>
+    <div id="fix">
+        <div id="container">
+            <div id="logo"><a href="index.html"><img src="img/logo.png" alt="as"> </a></div>
+            <nav>
+                <ul class="mainmenu">
+                    <li><a href="#">이용정보</a>
+                        <ul class="sub ulone">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">운영시간</a></li>
+                            <li><a href="#">운휴안내</a></li>
+                            <li><a href="#">교통정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금&프로모션</a>
+                        <ul class="sub ultwo">
+                            <li><a href="#">이용요금</a></li>
+                            <li><a href="#">제휴카드</a></li>
+                            <li><a href="#">스페셜 프로모션</a></li>
+                            <li><a href="#">드림투어</a></li>
+                            <li><a href="#">체험프로그램</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">즐길거리</a>
+                        <ul class="sub ulthree">
+                            <li><a href="#">추천코스</a></li>
+                            <li><a href="#">어트랙션</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버십</a>
+                        <ul class="sub ulfour">
+                            <li><a href="">연간이용권</a></li>
+                            <li><a href="">시즌이용권</a></li>
+                            <li><a href="">스피드웨이</a></li>
+                            <li><a href="">동물사랑단</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">에버랜드 스토리</a>
+                        <ul class="sub ulfive">
+                            <li><a href="">Editor's Pick</a></li>
+                            <li><a href="">에버랜드 스토리</a></li>
+                            <li><a href="">테마뮤직</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="search">
+                <div id="searchone" class="hide"><a href="#">온라인 예매</a></div>
+                <div id="searchtwo" class="hide"><a href="#">로그인</a></div>
+                <div id="searchthree" class="hide"><a href="#">회원가입</a></div>
+                <div id="searchfour" class="hide"><img src="img/search.png" alt="search"></div>
+                <div id="hidesearch">
+                    <div id="box">
+                    <input type="search" name="a" >
+                    <input type="image" src="img/search.png" alt="search">
+                    <button id="close">x</button>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="slider">
+    <ul class="slied"> 
+        <li>
+            <a href="#">
+            <img src="img/slider_2.jpg" alt="">
+
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/slider_3.jpg" alt="">
+            </a>
+        </li>
+        <li>
+           <a href="#">
+            <img src="img/slider_5.jpg" alt="">
+           </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/slider_4.jpg" alt="">
+            </a>
+        </li>
+      
+    </ul>
+    <p id="control">
+        <span class="prev">&lang;</span>
+        <span class="next">&rang;</span>
+    </p>
+</div>
+<script src="jsp/slider.js"></script>
+<div id="best">
+    <h1>Popular Attraction</h1>
+    <div id="top">
+        <div>
+            <img src="img/best1.jpg" alt="1">
+
+            <a href="#">View</a>
+        </div>
+        <div>
+            <img src="img/best2.jpg" alt="2">
+            <a href="#">View</a>
+        </div>
+    </div>
+    <div id="mid">
+        <div id="best3">
+            <img src="img/best3.jpg" alt="">
+            <a href="#">View</a>
+        </div>
+        <div id="best4">
+            <img src="img/best4.jpg" alt="">
+            <a href="#">View</a>
+        </div>
+        <div id="best5">
+            <img src="img/best5.jpg" alt="">
+            <a href="#">View</a>
+        </div>
+        <div id="best6">
+            <img src="img/best6.jpg" alt="">
+            <a href="#">View</a>
+        </div>
+
+    </div>
+</div>
+
+<div id="timeimg">
+    <div id="back">
+    <h1 id="demo">운영시간</h1>
+    <h1>10:00 ~ 22:00</h1>
+    <div id="time">
+        <p>금일 남은 운영시간</p> 
+    <h2 id="timer">
+        <span id="hour"></span>
+        <span>:</span>
+        <span id="min"></span>
+        <span>:</span>
+        <span id="sec"></span>
+    </h2>
+    
+    </div>
+    </div>
+</div>
+<script src="jsp/timer.js">
+   
+</script>
+
+<div id="parade">
+    <h1>퍼레이드</h1>
+    <div id="paradebox">
+        <div id="paradeone" class="pimg">
+        <a href="#"><img src="img/퍼레이드1.jpg" alt="1"></a>
+        <h3><a href="#">카니발 판타지 퍼레이드</a></h3>
+        <p>브라질의 삼바, 베니스의 가면, 카리브 축제가
+            한 자리에 모였다!
+            세계 유명 축제를 한 번에 즐길 수 있는
+            기회를 놓치지 마세요!</p>
+        </div>
+
+        <div id="paradetwo" class="pimg">
+            <a href="#"><img src="img/퍼레이드2.jpg" alt="2"></a>
+
+            <h3><a href="#">문라이트 퍼레이드</a></h3>
+            <p>
+                밤을 화려하게 장식해 줄 빛의 축제!
+                반짝이는 빛과 신나는 음악이 만드는 환상의 퍼레이드!
+                </p>
+        </div>
+        
+        <div id="paradethree" class="pimg">
+            <a href="#"><img src="img/퍼레이드3.jpg" alt="3"></a>
+        <h3><a href="#">왈츠 인 로열팰리스</a></h3>
+        <p>
+        화려한 꽃이 가득한 포시즌스 가든에서
+        무도회가 열렸어요!
+        설레는 마음으로 다함께 봄을 맞이해볼까요?
+        </p>
+        </div>
+    </div>
+</div>
+
+<div id="news">
+    <h1>news</h1>
+    <div>
+        <h3>2022.05.01</h3>
+        <div class="imgitem"><img src="img/news2.jpg" alt=""></div>
+        <p>&nbsp;코로나19 예방 및 고객과 직원의 안전을 위해<br>
+            아래와 같이 방역관리에 동참을 부탁드립니다. <br>
+            &nbsp;에버랜드는 고객의 안전을 위해 전직원이 마스크를 착용하고 있습니다. <br>
+            또한 실외 지역이라도 밀집된 지역에 계시는 경우 고객분들의 마스크 착용을 적극 권고드립니다.            
+        </p>
+        <button>more</button>
+    </div>
+    <div>
+        <h3>2022.04.25</h3>
+        <div class="imgitem">
+            <img src="img/news3.jpg" alt="">
+        </div>
+        <p>
+            &nbsp;코로나 환경으로 인해 장기간 운휴중이었던 <br>
+            '키즈커버리'의 운영이 전면 종료되었습니다. <br>
+            &nbsp;향후 손님여러분을 위한 새로운 편의공간으로
+            재단장하여 찾아뵐 예정이오니 양해 부탁드립니다. <br>
+            앞으로도 에버랜드는 손님 여러분께 최고의 서비스를
+            제공하기 위해 노력하겠습니다. &nbsp;감사합니다.
+        </p>
+        <button>more</button>
+
+    </div>
+    <div>
+        <h3>2022.04.11</h3>
+        <div class="imgitem">
+            <img src="img/news4.jpg" alt="">
+        </div>
+        <p>&nbsp;4/26(화) 부터 일부 시설이 스마트 줄서기로 운영되오니 참고 부탁드립니다.<br><br>
+            해당 시설 : 
+           <span>랩터레인저, 키즈빌리지, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            레니의 대모험, 헬로터닝 어드벤처</span>
+        </p>
+        <button>more</button>
+
+    </div>
+</div>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<footer>
+    <div class="foot_img">
+        <img src="img/twitter.png" alt="">
+        <img src="img/facebook.png" alt="">
+        <img src="img/instagram.png" alt="">
+    </div>
+    <div class="foot_container">
+        <div class="foot_logo">
+            <a href="index.html"><img src="img/logo.png" alt="" width="230" height="230" ></a>
+        </div>
+    <div class="link_up">
+        <h2>Link</h2>
+            <div class="link">
+                <p><a href="#">요금&프로모션</a></p>
+                <p><a href="#">이용정보</a></p>
+                <p><a href="#">즐길거리</a></p>
+                <p><a href="#">멤버십</a></p>
+                <p><a href="#">에버랜드 더 알아보기</a></p>
+            </div>
+    </div>
+    <div class="information_up">
+        <h2>Information</h2>
+            <div class="information">
+                <p><a href="#">에버랜드 리조트 소개</a></p>
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">이메일주소 무단수집 거부</a></p>
+                <p><a href="#">채용</a></p>
+                <p><a href="#">캐스트참여</a></p>
+            </div>
+    </div>
+    <div class="contact_up">
+        <h2>Contact</h2>
+            <div class="contact">
+                <p><a href="#">031-320-5000(유료)</a></p>
+                <!-- <p><a href="#">경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</a></p> -->
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">방침 개정 안내</a></p>
+                <p><a href="#">입찰공고</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

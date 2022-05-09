@@ -1,0 +1,362 @@
+@charset "utf-8";
+#tex{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+position: absolute;
+top:35%;
+left: 20%;
+/* transform: translatey(-40%); */
+color: #fff;
+}
+#tex a{
+  color: #fff;
+  border: 1px solid #ff6633;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  padding: 5px 0;
+}
+#tex a:hover{
+  background-color: #ff6633;
+  transition: ease-out 0.3s;
+  
+}
+#slider{
+  width: 1200px;
+  height: 400px;
+  /* border: 1px solid #ff6633; */
+  z-index: 5;
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.slied{
+  position: absolute;
+  left: 0;
+  top:30px;
+  width: 6000px;
+  height: 400px;
+  transition: left 0.5s ease-out;
+  display: flex;
+}
+.slied li:nth-of-type(4) img{
+  object-fit: fill;
+}
+.slied li img{
+  width: 1200px;
+  height: 400px;
+object-fit:cover;
+}
+.slied li:nth-of-type(3){
+  object-fit: fill;
+}
+
+#slider span{
+  position: absolute;
+  background-color: transparent;
+  color:#ff6633;
+  font-size: 35px;
+  cursor: pointer;
+  top: 50%;
+  transform: translatey(-50%);
+}
+#slider .prev{
+  left: 10px;
+}
+#slider .next{
+  right: 10px;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡ */
+#best{
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 30px auto; 
+}
+#best a{
+  position: relative;
+}
+#best a::before{
+  content: "";
+  position: absolute;
+  background-color: #ff6633;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.5s;
+  transform: translateX(-50%);
+}
+#best div>div:hover a::before{
+  width: 100%;
+  
+}
+#best>h1{
+  text-align: center;
+  margin:30px 0
+  
+}
+
+
+#top{
+  display: flex;
+  justify-content: space-between;
+}
+#top div{
+  width: 550px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+#top img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+object-fit: cover;
+
+}
+#top a{
+  color:#000;
+  font-size: 30px;
+  margin-left: -300px;
+  z-index: 2;
+}
+#top div:hover img{
+  transform: scale(1.1);
+  transition: all 1s;
+  opacity: 1;
+}
+#top div:hover a{
+  color: #fff;
+}
+#mid div:hover a{
+  color: #fff;
+}
+#mid div:hover img{
+  transform: scale(1.1);
+  transition: all 1s;
+  opacity: 1;
+  cursor: pointer;
+  
+
+}
+#mid a{
+  color:#000;
+  font-size: 30px;
+  margin-left: -200px;
+  z-index: 2;
+
+}
+#best6>a{
+  margin: -400px;
+}
+#mid img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+object-fit: cover;
+
+}
+#mid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#mid div{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#best3{
+  width:350px;
+  height:640px;
+}
+#best4{
+  width: 350px;
+  height: 300px;
+}
+#best5{
+  width: 350px;
+  height: 300px;
+}
+#best6{
+  width: 800px;
+  height: 300px;
+  margin-top: -300px;
+  margin-left: 420px;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ여기까지 어트랙션ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#timeimg{
+  width: 100%;
+  height: 500px;
+  margin: 50px 0;
+  background-image: url('../img/time.jpg'),url('../img/timer.jpg'),url('../img/time3.jpg');
+  background-repeat: no-repeat,no-repeat;
+  background-size: 30% 500px,70% 500px,100% 500px
+}
+#back{
+  width: 100%;
+  height: 500px;
+  backdrop-filter: blur(5px);
+  /* backdrop-filter: grayscale(30%); */
+
+
+}
+#timeimg h1{
+  color: #333;
+  text-align: center;
+
+}
+#time p{
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+#timer{
+  color: #4ba32f;
+  text-align: center;
+  font-weight: bold;
+  font-size: 130px;
+  word-spacing: 40px;
+}
+#time{
+  width: 1200px;
+  height: 300px;
+  margin: 30px auto;
+  background-color:rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ여기까지 타이머ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#parade{
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+
+}
+#paradebox{
+  display: flex;
+  justify-content: space-around;
+
+  
+}
+#parade h1{
+  text-align: center;
+  flex-basis: 100%;
+  margin-bottom: 50px;
+}
+.pimg{
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: 0.4s ease-out;
+}
+.pimg a{
+  width: 100%;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.pimg p{
+  display: none;
+  transition: 5s ease-out;
+  text-align: center;
+
+}
+#parade img{
+  width: 100%;
+  height: 100%;
+object-fit: cover;
+
+}
+#parade h3{
+  text-align: center;
+}
+@keyframes parade{
+  0%{
+    margin-top: 0;
+  }
+  100%{
+    margin-top: -40px;
+  }
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ여기까지 퍼레이드ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#news{
+  width: 1200px;
+  display: flex;
+  margin: 150px auto 30px auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+#news h1{
+  text-align: center;
+  flex-basis: 100%;
+}
+#news>div{
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #7a1f7f;
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+#news h3{
+  align-self: flex-end;
+}
+#news img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+#news span{
+  font-weight: bold;
+}
+#news button{
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid #7a1f7f;
+  align-self: flex-end;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 0 2px 0;
+
+}
+#news button:hover{
+  background-color: #7a1f7f;
+  border: 1px solid #7a1f7f;
+
+  color: #fff;
+  transition: ease-out 0.3s;
+}
+.imgitem{
+  /* background-image: url("/img/news5.jpg");
+  background-repeat: no-repeat;
+  background-position:right; */
+  flex-basis: 30%;
+}
+#news p{
+  flex-basis: 40%;
+
+}
+

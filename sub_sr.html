@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everland_즐길거리</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/sr_style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+    //navigation
+    $(function(){
+            $(window).scroll(function(){
+                var sub_top=document.getElementById("sub_joy").clientHeight;
+                var height=sub_top-300;
+                var scroll=$(window).scrollTop();
+                if(scroll>height){
+                    $("#container").css("background","#fff");
+                    $(".mainmenu>li>a").css("color","#000");
+                    $(".sub>li>a").css("color","#000");
+                    $(".sub").css("background","#fff");
+                    $("#search>div a").css("color","#000");
+
+
+                }else{
+                    $("#container").css("background","none");
+                    $(".mainmenu>li>a").css("color","#fff");
+                    $(".sub>li>a").css("color","#fff");
+                    $(".sub").css("background","none");
+                    $("#search>div a").css("color","#fff");
+
+                }
+            })
+            $("#searchfour").click(function(){
+                $(".hide").hide();
+                $("#hidesearch").show();
+                $("#search>div").css("border","none");
+                $("#search").css("justify-content","flex-end");
+            });
+            $("#close").click(function(){
+                $(".hide").show();
+                $("#hidesearch").hide();
+                $("#search>div").css("border-right","1px solid #000");
+                $("#searchfour").css("border-right","none");
+                $("#search").css("justify-content","space-between");
+            });
+        });
+
+    //sub_middle_menu
+        $(function() {
+            $('.sub_middle_menu_btn1').click(function() {
+                $('#sub_middle_menu a').removeClass('active'); // 클릭시 #sub_middle_menu 안에 있는 a의 class active가 없어지게 하는 내용
+                $('.sub_middle_menu_btn1 a').addClass('active'); // 클릭시 .sub_middle_menu_btn1의 a가 active 되도록 하는 내용
+                $("#sub_middle_attraction_wrap").fadeIn();
+                $("#sub_middle_course_wrap").hide();
+                $("#sub_middle_enter_wrap").hide();
+                $('html,body').animate( { scrollTop : 450 }, 500 );
+            });
+
+            $('.sub_middle_menu_btn2').click(function() {
+                $('#sub_middle_menu a').removeClass('active');
+                $('.sub_middle_menu_btn2 a').addClass('active');
+                $("#sub_middle_course_wrap").fadeIn();
+                $("#sub_middle_attraction_wrap").hide();
+                $("#sub_middle_enter_wrap").hide();
+                $('html,body').animate( { scrollTop : 450 }, 500 );
+            });
+            
+            $('.sub_middle_menu_btn3').click(function() {
+                $('#sub_middle_menu a').removeClass('active');
+                $('.sub_middle_menu_btn3 a').addClass('active');
+                $("#sub_middle_enter_wrap").fadeIn();
+                $("#sub_middle_attraction_wrap").hide();
+                $("#sub_middle_course_wrap").hide();
+                $('html,body').animate( { scrollTop : 450 }, 500 );
+            });
+        });
+
+    //sub_middle_box_menu
+        $(function() {
+                $("#sub_middle_attraction_grobal").hide();
+                $("#sub_middle_attraction_american").hide();
+                //display:flex를 적용했기 때문에 display:none 대신 hide로 숨겨둠
+
+            $('#sub_middle_attraction_menu_btn1').click(function() {
+                $("#sub_middle_attraction_all").fadeIn();
+                $("#sub_middle_attraction_grobal").hide();
+                $("#sub_middle_attraction_american").hide();
+                $('html,body').animate( { scrollTop : 1650 }, 700 );
+                //animate의 숫자는 일어나는 시간 1000=1초
+                
+            });
+
+
+            $('#sub_middle_attraction_menu_btn2').click(function() {
+                $("#sub_middle_attraction_grobal").fadeIn();
+                $("#sub_middle_attraction_all").hide();
+                $("#sub_middle_attraction_american").hide();
+                $('html,body').animate( { scrollTop : 1650 }, 700 );
+            });
+
+
+            $('#sub_middle_attraction_menu_btn3').click(function() {
+                $("#sub_middle_attraction_american").fadeIn();
+                $("#sub_middle_attraction_all").hide();
+                $("#sub_middle_attraction_grobal").hide();
+                $('html,body').animate( { scrollTop : 1650 }, 700 );
+            });
+        });
+
+    //popup
+            $(function () {
+
+                $('.hide_text').click(function () {
+                    $("#popup").fadeIn();
+                });
+
+                $('.close_btn').click(function () {
+                    $("#popup").hide();
+                });
+            });
+
+    //Scroll FadeIn
+            $(document).ready(function () {
+                 $(window).scroll(function () {
+                    $('.sub_middle_attraction_all_box').each(function (i) {
+                         var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 10;
+                         var bottom_of_window = $(window).scrollTop() + $(window).height();
+                        if( bottom_of_window > bottom_of_object ) {
+                             $(this).animate({ 'opacity': '1' }, 500);
+                          } 
+                        
+                     });
+                 });
+            });
+
+    </script>
+    
+</head>
+<body>
+
+<div id="sub_joy">
+    <!-- 서브 상단 이미지 -->
+    <div class="sub_top">
+        <div class="sub_top_text">
+            <h1>즐길거리</h1>
+            <span>다양한 에버랜드 정보를 확인해보세요!</span>
+        </div>
+    </div>
+
+    <!-- 상단 이동 버튼 -->
+    <div id="top_btn">
+        <a href="#">∧</a>
+    </div>
+
+    <!-- 상단 메뉴 -->
+    <div id="fix">
+        <div id="container">
+            <div id="logo"><a href="index.html"><img src="img/logo.png" alt="as"> </a></div>
+            <nav>
+                <ul class="mainmenu">
+                    <li><a href="#">이용정보</a>
+                        <ul class="sub ulone">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">운영시간</a></li>
+                            <li><a href="#">운휴안내</a></li>
+                            <li><a href="#">교통정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금&프로모션</a>
+                        <ul class="sub ultwo">
+                            <li><a href="#">이용요금</a></li>
+                            <li><a href="#">제휴카드</a></li>
+                            <li><a href="#">스페셜 프로모션</a></li>
+                            <li><a href="#">드림투어</a></li>
+                            <li><a href="#">체험프로그램</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">즐길거리</a>
+                        <ul class="sub ulthree">
+                            <li><a href="#">추천코스</a></li>
+                            <li><a href="#">어트랙션</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">멤버십</a>
+                        <ul class="sub ulfour">
+                            <li><a href="">연간이용권</a></li>
+                            <li><a href="">시즌이용권</a></li>
+                            <li><a href="">스피드웨이</a></li>
+                            <li><a href="">동물사랑단</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">에버랜드 스토리</a>
+                        <ul class="sub ulfive">
+                            <li><a href="">Editor's Pick</a></li>
+                            <li><a href="">에버랜드 스토리</a></li>
+                            <li><a href="">테마뮤직</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="search">
+                <div id="searchone" class="hide"><a href="#">온라인 예매</a></div>
+                <div id="searchtwo" class="hide"><a href="#">로그인</a></div>
+                <div id="searchthree" class="hide"><a href="#">회원가입</a></div>
+                <div id="searchfour" class="hide"><img src="img/search.png" alt="search"></div>
+                <div id="hidesearch">
+                    <div id="box">
+                    <input type="search" name="a" >
+                    <input type="image" src="img/search.png" alt="search">
+                    <button id="close">x</button>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="sub_middle">
+
+    <!-- 즐길거리 전체 메뉴 -->
+    <div id="sub_middle_menu">
+        <ul>
+            <li class="sub_middle_menu_btn1"><a href="#" class="active">어트랙션</a></li>
+            <li>|</li>
+            <li class="sub_middle_menu_btn2"><a href="#">추천코스</a></li>
+            <li>|</li>
+            <li class="sub_middle_menu_btn3"><a href="#">엔터테인먼트</a></li>
+        </ul>
+    </div>
+
+    <!-- 어트랙션 페이지 -->
+    <div id="sub_middle_attraction_wrap">
+
+    <!-- 어트랙션 박스 메뉴 -->
+        <div id="sub_middle_attraction_menu">
+            <div id="sub_middle_attraction_menu_btn1">어트랙션 전체보기</div>
+            <div id="sub_middle_attraction_menu_btn2">글로벌페어</div>
+            <div id="sub_middle_attraction_menu_btn3">아메리칸 어드벤처</div>
+            <div id="sub_middle_attraction_menu_btn4">매직랜드</div>
+            <div id="sub_middle_attraction_menu_btn5">유러피언 어드벤처</div>
+            <div id="sub_middle_attraction_menu_btn6">주토피아</div>
+        </div>
+
+    <!-- 어트랙션 슬라이드 -->
+        <div id="attraction_slide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide_text_box">
+                            <h2>썬더 폴스 <span>추천 1</span></h2>
+                            <p>20미터의 국내 최고 낙하높이! 45도의 국내 최대 낙하각도!
+                                국내 최초로 도입된 뒤로 떨어지는 백워드 드롭!
+                                약 40미터 확장 된 최장 수로길이 486미터!</p>
+                            <button>위치 확인</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_text_box">
+                            <h2>아마존 <span>추천 2</span></h2>
+                            <p>많은 탐험가들이 호수 속에 잠들어 있는
+                                황금을 차지하기 위해 보트 위에 몸을 맡겼다!
+                                아마존 밀림 구석구석 장장 580미터 굽이치는 급류 속으로
+                                꿈과 모험을 찾아 떠나는 곳!</p>
+                            <button>위치 확인</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_text_box" style="width: 35%; left: 24%;">
+                            <h2>콜럼버스 대탐험 <span>추천 3</span></h2>
+                            <p>신대륙을 찾아 떠나는 콜롬버스호의 대탐험이 시작된다.
+                                거친 파도에 맞서듯, 33미터 고공에서 75도 경사로 떨어지는 절대 쾌감!
+                                대항해탐험을 함께 떠나봐요~</p>
+                            <button>위치 확인</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        
+            <!-- Swiper JS -->
+            <script src="../team_project_everland/js/swiper.min.js"></script>
+        
+            <!-- Initialize Swiper -->
+            <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 30,
+            });
+            </script>
+        </div>
+
+    <!-- 어트랙션 클릭시 팝업창 -->
+        <div id="popup" class="hide_popup">
+            <div class="content">
+                <div class="popup_img_box">
+                    <img src="img/1_texpress.jpg" alt="1">
+                </div>
+                <div class="popup_text_box">
+                    <h1>T익스프레스</h1>
+                    <p>시속 104km의 엄청난 속도, 낙하각 77도의 아찔함! <br>
+                        세계 최고의 우든코스터가 잊지 못 할 최고의 기억을 여러분께 선사합니다.
+                    </p>
+                    <p style="border: 1px solid rgb(212, 212, 212); padding:20px;">
+                        [이용안내] <br>
+                        - 스마트줄서기로 운영되는 시설로 운영상황에 따라
+                        현장줄서기로 전환될 수 있습니다. <br>
+                        - 현장줄서기로 전환될 경우, 현장줄서기 전환시간은
+                        에버랜드 App에서 확인할 수 있습니다. <br>
+                        - 스마트줄서기 신청 후 예약된 시간에 이용 가능하며
+                        예약 마감된 경우 이용이 불가합니다.
+                    </p>
+                </div>
+                <button class="close_btn">창 닫기</button>
+            </div>
+        </div>
+
+    <!-- 어트랙션 전체보기 내용-->
+        <div id="sub_middle_attraction_all">
+            <h3>어트랙션 전체보기</h3>
+
+            <ul class="sub_middle_attraction_all_box" style="margin: 50px auto 5px;">
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p class="hide_text">상세정보 보기</p>
+                        <p><img src="img/1_texpress.jpg" alt="1"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>T익스프레스</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p class="hide_text">상세정보 보기</p>
+                        <p><img src="img/2_safari.jpg" alt="2"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>사파리 월드</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p class="hide_text">상세정보 보기</p>
+                        <p><img src="img/3_vally.jpg" alt="3"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>로스트 밸리</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/4_panda.jpg" alt="4"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>판다월드</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/5_amazon.jpg" alt="5"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>아마존</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/6_thunder.jpg" alt="6"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>썬더폴스</p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="sub_middle_attraction_all_box">
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/7_biking.jpg" alt="7"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>콜럼버스 대탐험</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/8_vr.jpg" alt="8"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>자이로 VR</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/9_robot.jpg" alt="9"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>로봇 VR</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/10_double.jpg" alt="10"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>더블 락스핀</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/11_lets.jpg" alt="11"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>렛츠 트위스트</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/12_train.jpg" alt="12"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>롤링 엑스 트레인</p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="sub_middle_attraction_all_box">
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/13_Hurricane.jpg" alt="13"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>허리케인</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/14_champion.jpg" alt="14"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>챔피언쉽 로데오</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/15_laptor.jpg" alt="15"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>랩터레인저</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/16_kids.jpg" alt="16"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>키즈 빌리지</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/17_turning.png" alt="17"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>터닝메카드</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/18_magiccookie.jpg" alt="18"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>매직쿠키 하우스</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    <!-- 어트랙션 글로벌페어 내용-->
+        <div id="sub_middle_attraction_grobal">
+            <h3>글로벌페어</h3>
+
+            <ul class="sub_middle_attraction_grobal_box">
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/17_turning.png" alt="1"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>헬로 터닝 어드벤처</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    <!-- 어트랙션 아메리칸 어드벤처 내용-->
+        <div id="sub_middle_attraction_american">
+            <h3>아메리칸 어드벤처</h3>
+            <ul class="sub_middle_attraction_american_box">
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/7_biking.jpg" alt="1"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>콜럼버스 대탐험</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/8_vr.jpg" alt="8"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>자이로 VR</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/9_robot.jpg" alt="9"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>로봇 VR</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/10_double.jpg" alt="10"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>더블 락스핀</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/11_lets.jpg" alt="11"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>렛츠 트위스트</p>
+                    </div>
+                </li>
+                <li style="width: 30%;">
+                    <div class="attraction_img_box">
+                        <p><img src="img/12_train.jpg" alt="12"></p>
+                    </div>
+                    <div class="attraction_text_box">
+                        <p>롤링 엑스 트레인</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 추천코스 페이지-->
+    <div id="sub_middle_course_wrap">
+
+        <div id="slidewrap">
+            
+            <ul class="slide">
+                    <li><img src="img/course1.jpg" alt="slide image"></li>
+
+                    <li><img src="img/course2.jpg" alt="slide image"></li>
+
+                    <li><img src="img/course3.jpg" alt="slide image"></li>
+
+                    <li><img src="img/course4.jpg" alt="slide image"></li>
+            </ul>
+
+            <span class="prev">&lt;</span>
+
+            <span class="next">&gt;</span>
+            </div>
+            
+            <script>
+                function prev(){
+                $('.slide li:last').prependTo('.slide');
+                $('.slide').css('margin-left',-800); // $('.slide').css({marginLeft:-1000});
+                $('.slide').stop().animate({marginLeft:0},800);
+                }
+                
+                function next(){
+                $('.slide').stop().animate({marginLeft:-800}, function(){
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({marginLeft:0});
+                });
+                
+                }
+                
+                function slide(){
+                $('.slide').stop().animate({marginLeft:-800}, function(){
+                $('.slide li:first').appendTo('.slide');
+                $('.slide').css({marginLeft:0});
+                });
+                }
+                
+                
+                $('.prev').click(function(){
+                prev();
+                });
+                
+                $('.next').click(function(){
+                next();
+                
+                });
+            </script>
+    </div>
+
+    <!-- 엔터테인먼트 페이지-->
+    <div id="sub_middle_enter_wrap">
+        <p>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/b2gj0YhWgKQ?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </div>
+
+</div>
+
+
+    <!-- 푸터-->
+<footer>
+    <div class="foot_img">
+        <img src="img/twitter.png" alt="">
+        <img src="img/facebook.png" alt="">
+        <img src="img/instagram.png" alt="">
+    </div>
+    <div class="foot_container">
+        <div class="foot_logo">
+            <a href="index.html"><img src="img/logo.png" alt="" width="230" height="230" ></a>
+        </div>
+    <div class="link_up">
+        <h2>Link</h2>
+            <div class="link">
+                <p><a href="#">요금&프로모션</a></p>
+                <p><a href="#">이용정보</a></p>
+                <p><a href="#">즐길거리</a></p>
+                <p><a href="#">멤버십</a></p>
+                <p><a href="#">에버랜드 더 알아보기</a></p>
+            </div>
+    </div>
+    <div class="information_up">
+        <h2>Information</h2>
+            <div class="information">
+                <p><a href="#">에버랜드 리조트 소개</a></p>
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">이메일주소 무단수집 거부</a></p>
+                <p><a href="#">채용</a></p>
+                <p><a href="#">캐스트참여</a></p>
+            </div>
+    </div>
+    <div class="contact_up">
+        <h2>Contact</h2>
+            <div class="contact">
+                <p><a href="#">031-320-5000(유료)</a></p>
+                <!-- <p><a href="#">경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</a></p> -->
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">방침 개정 안내</a></p>
+                <p><a href="#">입찰공고</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

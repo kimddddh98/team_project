@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERLAND RESORT</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sub_jh.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/sub_jh.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                var video=document.getElementById("slider").clientHeight;
+                var height=video-300;
+                var max= document.getElementsByTagName("body")[0].clientHeight; 
+                var scroll=$(window).scrollTop();
+                if(scroll>height){
+                    $("#container").css("background","#fff");
+                    $(".mainmenu>li>a").css("color","#333");
+                    $(".sub>li>a").css("color","#333");
+                    $(".sub").css("background","#fff");
+                    $("#search>div a").css("color","#666");
+                }
+                else{
+                    $("#container").css("background","none");
+                    $(".mainmenu>li>a").css("color","#fff");
+                    $(".sub>li>a").css("color","#fff");
+                    $(".sub").css("background","none");
+                    $("#search>div a").css("color","#fff");
+                }
+            })
+            $("#searchfour").click(function(){
+                $(".hide").hide();
+                $("#hidesearch").show();
+                $("#search>div").css("border","none");
+                $("#search").css("justify-content","flex-end");
+            });
+            $("#close").click(function(){
+                $(".hide").show();
+                $("#hidesearch").hide();
+                $("#search>div").css("border-right","1px solid #000");
+                $("#searchfour").css("border-right","none");
+                $("#search").css("justify-content","space-between");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="video">
+        <!-- 이미지 넣는곳 -->
+        <div id="slider">
+            <div class="slide_image">
+                <h2>이용요금/프로모션</h2>
+            </div>
+        </div>
+        <div id="fix">
+            <div id="container">
+                <div id="logo"><a href="index.html"><img src="img/logo.png" alt="as"> </a></div>
+                <nav>
+                    <ul class="mainmenu">
+                        <li><a href="#">이용정보</a>
+                            <ul class="sub ulone">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이용방법</a></li>
+                                <li><a href="#">운영시간</a></li>
+                                <li><a href="#">운휴안내</a></li>
+                                <li><a href="#">교통정보</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">요금&프로모션</a>
+                            <ul class="sub ultwo">
+                                <li><a href="#">이용요금</a></li>
+                                <li><a href="#">제휴카드</a></li>
+                                <li><a href="#">스페셜 프로모션</a></li>
+                                <li><a href="#">드림투어</a></li>
+                                <li><a href="#">체험프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">즐길거리</a>
+                            <ul class="sub ulthree">
+                                <li><a href="#">추천코스</a></li>
+                                <li><a href="#">어트랙션</a></li>
+                                <li><a href="#">엔터테인먼트</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">멤버십</a>
+                            <ul class="sub ulfour">
+                                <li><a href="">연간이용권</a></li>
+                                <li><a href="">시즌이용권</a></li>
+                                <li><a href="">스피드웨이</a></li>
+                                <li><a href="">동물사랑단</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">에버랜드 스토리</a>
+                            <ul class="sub ulfive">
+                                <li><a href="">Editor's Pick</a></li>
+                                <li><a href="">에버랜드 스토리</a></li>
+                                <li><a href="">테마뮤직</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="search">
+                    <div id="searchone" class="hide"><a href="#">온라인 예매</a></div>
+                    <div id="searchtwo" class="hide"><a href="#">로그인</a></div>
+                    <div id="searchthree" class="hide"><a href="#">회원가입</a></div>
+                    <div id="searchfour" class="hide"><img src="img/search.png" alt="search"></div>
+                    <div id="hidesearch">
+                        <div id="box">
+                        <input type="search" name="a" >
+                        <input type="image" src="img/search.png" alt="search">
+                        <button id="close">x</button>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quickmenu">
+            <div class="scroll1"  onscroll="mFunc()" onclick="onday()">
+                <span>종일권</span>
+            </div>
+            <div class="scroll2"  onscroll="mFunc()" onclick="oneyear()">
+                <span>연간 이용</span>
+            </div>
+            <div class="scroll3"  onscroll="mFunc()" onclick="promo()">
+                <span>프로모션</span>
+            </div>
+    </div>     
+        <section>
+            <div id="main"></div>
+            <div class="container" id="main1">
+                    <h2>종일권</h2>
+                <div class="money money1">
+                    <div class="oday_info">
+                        <p>에버랜드 입장 및 놀이시설 이용<br>
+                            (코인물/대여물/기획전 등 일부<br> 
+                            시설 별도 요금)<br>
+                            당일 호암미술관 무료 입장</p>
+                    </div>
+                    <div class="oday_btn">
+                        <button>ABCD 캘린더</button>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="plus">
+                        <h3>대인/청소년</h3>
+                    </div>
+                        <div class="more">
+                            <p>A :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 58,000 원</p>
+                            <p>B :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50,000 원</p>
+                            <p>C :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 46,000 원</p>
+                            <p>D :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64,000 원</p>
+                        </div>
+                </div>
+                <div class="money">
+                    <div class="plus">
+                        <h3>소인/경로</h3>
+                    </div>
+                        <div class="more">
+                            <p>A :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46,000 원</p>
+                            <p>B :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40,000 원</p>
+                            <p>C :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36,000 원</p>
+                            <p>D :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51,000 원</p>
+                        </div>
+                </div>
+            </div>
+            <div id="main2"></div>
+            <div id="yearpass">
+                <h2>연간이용권</h2>
+                <div class="money">
+                    <div class="char char1">
+                    </div>
+                    <div class="intro">
+                        <h3>365 스탠다드</h3>
+                            <p>상품소개</p>
+                                <span>- 365일 언제나 사용가능</span>
+                    </div>
+                    <div class="out"><p>가격</p>
+                        <span>구분</span>
+                        <span>신규</span>
+                        <span>재가입</span>
+                    </div>
+                    <div class="last">
+                        <span>대인/<br>
+                            청소년</span>
+                        <span>260,000</span>
+                        <span>210,000</span>
+                        <span>소인<Br>
+                            (만3세~12세)</span>
+                        <span>220,000</span>
+                        <span>170,000</span>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="char char2">
+                        
+                    </div>
+                    <div class="intro">
+                        <h3>365 시니어</h3>
+                            <p>상품소개</p>
+                                <span>- 365일 이용가능</span>
+                                <span>- 만60세 이상 가입</span>
+                    </div>
+                    <div class="out"><p>가격</p>
+                        <span>구분</span>
+                        <span>신규</span>
+                        <span>재가입</span>
+                    </div>
+                    <div class="last last2">
+                        <span>대인<br>
+                            (시니어)</span>
+                        <span>120,000</span>
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="char char3">
+                    </div>
+                    <div class="intro">
+                        <h3>365 베이비</h3>
+                            <p>상품소개</p>
+                                <span>- 365일 이용가능</span>
+                                <span>- 24개월~35개월 가입</span>
+                                <span>(36개월 생일 전까지)</span>
+                                <span>- 생애 1회 Only</span>
+                    </div>
+                    <div class="out"><p>가격</p>
+                        <span>구분</span>
+                        <span>신규</span>
+                        <span>재가입</span>
+                    </div>
+                    <div class="last last3">
+                        <span>24개월~35개월<br>
+                            (36개월 생일 전까지)</span>
+                        <span>80,000</span>
+                        <span>&nbsp;</span>
+                    </div>
+
+                </div>
+                <div class="money">
+                    <div class="char char4">
+                        
+                    </div>
+                    <div class="intro">
+                        <h3>350 스탠다드</h3>
+                            <p>상품소개</p>
+                                <span>- 약 350일 이용가능&nbsp;&nbsp;(주요연휴기간 제외) </span>
+                    </div>
+                    <div class="out"><p>가격</p>
+                        <span>구분</span>
+                        <span>신규</span>
+                        <span>재가입</span>
+                    </div>
+                    <div class="last">
+                        <span>대인/
+                            <br>청소년</span>
+                        <span>220,000</span>
+                        <span>170,000</span>
+                        <span>소인</span>
+                        <span>180,000</span>
+                        <span>130,000</span>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="char char5">
+                        
+                    </div>
+                    <div class="intro">
+                        <h3>320 셀렉트</h3>
+                            <p>상품소개</p>
+                                <span>- 약 320일 이용가능&nbsp;&nbsp;(D기간 이용불가)</span>
+                    </div>
+                    <div class="out"><p>가격</p>
+                        <span>구분</span>
+                        <span>신규</span>
+                        <span>재가입</span>
+                    </div>
+                    <div class="last">
+                        <span>대인/<br>
+                            청소년</span>
+                        <span>170,000</span>
+                        <span>&nbsp;</span>
+                        <span>소인<br>
+                            (만3세~12세)</span>
+                        <span>130,000</span>
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="char char6">
+                        
+                    </div>
+                    <div class="intro">
+                        <h3>250 위크데이</h3>
+                            <p>상품소개</p>
+                            <div class="year_info">
+                                <span>- 약 250일 이용가능&nbsp;&nbsp;(주말,휴일 이용불가)</span>
+                            </div>
+                    </div>
+                        <div class="out"><p>가격</p>
+                            <span>구분</span>
+                            <span>신규</span>
+                            <span>재가입</span>
+                        </div>
+                    <div class="last">
+                        <span>대인/<br>
+                            청소년</span>
+                        <span>130,000</span>
+                        <span>&nbsp;</span>
+                        <span>소인<br>
+                            (만3세~12세)</span>
+                        <span>100,000</span>
+                        <span>&nbsp;</span>
+
+                    </div>
+                </div>
+            </div>
+            <div id="main4"></div>
+            <div id="promotion">
+                        <h2>프로모션</h2>
+                            <div class="button_box">
+                                <div class="sub_btnbox">
+                                    <button class="btn sub_btn1 flipped" onclick="Buttontoggle();">전체</button>
+                                    <button class="btn sub_btn2 " onclick="Buttontoggle();">일반</button>
+                                    <button class="btn sub_btn3 " onclick="Buttontoggle();">유아동반가족</button>
+                                    <button class="btn sub_btn4 " onclick="Buttontoggle();">초/중/고 동반 가족</button>
+                                    <button class="btn sub_btn5 " onclick="Buttontoggle();">카드</button>
+                                </div>
+                            </div>
+                    <div class="all">
+                        <div class="pro_container">
+                            <div class="spec">
+                                    <div class="serv">
+                                        <span>추천할인</span>
+                                    </div>
+                                        <h2>키즈PKG(2인권)</h2>
+                                        <h4>교통박물관 무료이용/키자니아 우대혜택</h4>
+                                        <span>
+                                            ~ 6.10
+                                        </span>
+                                    <div class="pay">
+                                        <span>58,000원~</span>
+                                    </div>
+                                    <img src="img/promotion_1.png" alt="">
+                            </div>
+                            <div class="spec main2">
+                                <div class="serv">
+                                    <span>추천할인</span>
+                                </div>
+                                <h2>에버랜드 2/3인 세트권</h2>
+                                <h4>스마트예약 한정</h4>
+                                <span>
+                                    04.01~06.10
+                                </span>
+                                <div class="pay">
+                                    <span>70,000원~</span>
+                                </div>
+                                <img src="img/promotion_2.png" height="124" width="207" alt="">
+                            </div>
+                        </div>
+                            <div class="normal">
+                                <div class="norm">
+                                    <div class="serv">
+                                        <span>이달의 혜택</span>
+                                    </div>
+                                    <h2>SPRING 가족 패스큐
+                                        <br>패스 패키지</h2>
+                                    <h4>스마트예약 한정</h4>
+                                    <div class="pay">
+                                        <span>95,000원~</span>
+                                    </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>어트랙션<br>
+                                도장깨기 시즌1</h2>
+                                <h4>스마트예약 한정</h4>
+                                <div class="pay">
+                                    <span>41,000원~</span>
+                                </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>워터라이드 패키지</h2>
+                                <h4>스마트예약 한정</h4>
+                                <div class="pay">
+                                    <span>41,000원~</span>
+                                </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>T-발렛 PKG<BR>
+                                2/3/4인권</h2>
+                                <h4>스마트예약 한정</h4>
+                                <div class="pay">
+                                    <span>93,000원~</span>
+                                </div>
+                                </div>
+                                <div class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>생일자<br>
+                                우대혜택</h2>
+                                <h4></h4>
+                                <div class="pay">
+                                    <span>25,000원~</span>
+                                </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>감성교복<br>
+                                    패키지
+                                </h2>
+                                <h4>스마트예약</h4>
+                                <div class="pay">
+                                    <span>56,000원~</span>
+                                </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>오후권<BR>
+                                (15시 입장)</h2>
+                                <h4>스마트예약 한정</h4>
+                                <div class="pay">
+                                    <span>29,900원~</span>
+                                </div>
+                                </div>
+                                <div  class="norm">
+                                <div class="serv">
+                                    <span>이달의 혜택</span>
+                                </div>
+                                <h2>Thank U<br>
+                                휴가군인 무료</h2>
+                                <div class="pay">
+                                    <span></span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="pro_normal" style="display: none;">
+                                <div class="spec_sub2">
+                                    <div class="spec main2">
+                                        <div class="serv">
+                                            <span>추천할인</span>
+                                        </div>
+                                        <h2>에버랜드 2/3인 세트권</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <span>
+                                            04.01~06.10
+                                        </span>
+                                        <div class="pay">
+                                            <span>70,000원~</span>
+                                        </div>
+                                        <img src="img/promotion_2.png" height="124" width="207" alt="">
+                                    </div>
+                                </div>
+                                <div class="norm_sub">
+                                    <div  class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>어트랙션<br>
+                                        도장깨기 시즌1</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <div class="pay">
+                                            <span>41,000원~</span>
+                                        </div>
+                                    </div>    
+                                    <div  class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>워터라이드 패키지</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <div class="pay">
+                                            <span>41,000원~</span>
+                                        </div>
+                                        </div>
+                                        <div  class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>T-발렛 PKG<BR>
+                                        2/3/4인권</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <div class="pay">
+                                            <span>93,000원~</span>
+                                        </div>
+                                        </div>
+                                        <div class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>생일자<br>
+                                        우대혜택</h2>
+                                        <div class="pay">
+                                            <span>25,000원~</span>
+                                        </div>
+                                        </div>
+                                        <div   class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>감성교복<br>
+                                            패키지
+                                        </h2>
+                                        <h4>스마트예약</h4>
+                                        <div class="pay">
+                                            <span>56,000원~</span>
+                                        </div>
+                                        </div>
+                                        <div  class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>오후권<BR>
+                                        (15시 입장)</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <div class="pay">
+                                            <span>29,900원~</span>
+                                        </div>
+                                        </div>
+                                        <div   class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>Thank U<br>
+                                        휴가군인 무료</h2>
+                                        <h4></h4>
+                                        <div class="pay">
+                                            <span></span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="kids_family" style="display: none;">
+                                <div class="sub_spec">
+                                    <div class="spec" >
+                                        <div class="serv">
+                                            <span>추천할인</span>
+                                        </div>
+                                            <h2>키즈PKG(2인권)</h2>
+                                            <h4>교통박물관 무료이용/키자니아 우대혜택</h4>
+                                            <span>
+                                                ~ 6.10
+                                            </span>
+                                        <div class="pay">
+                                            <span>58,000원~</span>
+                                        </div>
+                                        <img src="img/promotion_1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="sub_kid">
+                                    <div  class="norm">
+                                        <div class="serv">
+                                            <span>이달의 혜택</span>
+                                        </div>
+                                        <h2>SPRING 가족 패스큐
+                                            <br>패스 패키지</h2>
+                                        <h4>스마트예약 한정</h4>
+                                        <div class="pay">
+                                            <span>95,000원~</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="normal_family" style="display: none;">
+                                <div  class="norm">
+                                    <div class="serv">
+                                        <span>이달의 혜택</span>
+                                    </div>
+                                    <h2>SPRING 가족 패스큐
+                                        <br>패스 패키지</h2>
+                                    <h4>스마트예약 한정</h4>
+                                    <div class="pay">
+                                        <span>95,000원~</span>
+                                    </div>
+                                </div>
+                                <div  class="norm">
+                                    <div class="serv">
+                                        <span>이달의 혜택</span>
+                                    </div>
+                                    <h2>T-발렛 PKG<BR>
+                                    2/3/4인권</h2>
+                                    <h4>스마트예약 한정</h4>
+                                    <div class="pay">
+                                        <span>93,000원~</span>
+                                    </div>
+                                    </div>
+                            </div>
+                            <div class="card" style="display:none">
+                                <div class="none"></div>
+                                <h2>일치하는 항목이 없습니다.</h2>
+                            </div>
+            </div>
+            <div class="info_container" id="main3">
+                <h3>*&nbsp;&nbsp;&nbsp;가입안내</h3>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 입장 제한일이 있는 권종은, 입장 제한일에 방문할 경우 매표소에서 연간이용권과 신분증을 제시하시고</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1일 이용권을 해당일자의 정상금액에서 40% 할인하여 구입하실 수 있습니다.
+                     <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 재가입 및 연차 적용 기준<br></b>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 셀렉트/위크데이 가입 시 연차는 인정되나 혜택은 제공이 불가합니다. (추후 스탠다드권종 가입 시 혜택 적용 가능)
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 365시니어/365베이비패스 가입 시 주의사항<br></b>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 가입 대상임을 증명할 수 있는 증빙서류 제출 필수(스마트예약 결제 시 + 현장방문 결제 선택 필수)<Br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 베이비 확인 서류: 주민등록등본, 건강보험증<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시니어 확인 서류: 주민등록등본, 자동차 운전 면허증, 여권<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;단, 재가입시에는 스마트예약에서 별도 확인없이 가입 가능<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 베이비패스는 생애 1회 한해 가입 가능하며, 만기 이전 해지할 경우 해당 권종으로 재가입은 불가합니다.</p>
+                    <button class="sub_pro">연간이용권 프로모션 이용안내 바로 가기</button>
+                <h3>*&nbsp;&nbsp;&nbsp;우대정보</h3>
+                <button id="semi_info">우대정보 확인하기</button>
+                <div id="info">
+                    <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※ 타 제휴카드 및 프로모션 등과 중복 우대 적용 불가</b><br>
+                        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※ 신분증 / 서류 확인이 필요한 경우 현장매표소에서만 구입 가능합니다.</b></p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연령에 따른 우대 (나이 확인이 가능한 신분증 또는 서류 제시)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 경로 : 만 65세 ~ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 청소년 : 만 13세 ~ 만 18세 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 소인 : 36개월 ~ 만 12세 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 36개월 미만 : <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무료 이용(유료시설의 경우 이용권 별도 구입 필요) <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 유아이용권: 5,000원(붕붕카, 로보트카, 자동차왕국 모두 이용 가능)</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>※ 대인요금은 청소년과 통합하며, 청소년 대상 프로모션은 '요금&프로모션>스페셜 프로모션' 참조</b><br>
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>장애인 우대 (장애인등록증 제시) 우대가격</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 장애의 정도가 심한 장애인<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;본인 : 우대가 적용<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동반인 : 우대가 적용 (최대1명까지)<br>
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 장애의 정도가 심하지 않은 장애인<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;본인 : 우대가 적용
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※ 종일권 우대가로 구입 가능<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>국가유공자 우대 (증명서류 제시) 파크이용권 가격 보기</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 본인 : 종일권 50% 우대가로 구입 가능<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 동반인 : 종일권 50% 우대가로 구입 가능(최대 1명까지)
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>3자녀 이상 가정 우대 (건강보험증, 등본 등 3자녀 이상 가정 증명서류 제시)</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 종일권 우대가로 구입 가능 우대가격<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 우대 대상 : 막내 자녀가 만 15세 이하인 3명 이상의 3자녀 이상 가정의 부부와 직계자녀<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 해당 가정 내 일부 가족만 이용 시에도 혜택 적용<br>
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>임신부 우대 (산모수첩 혹은 임신확인서 제시)</b><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 종일권(임신부 본인) 우대가로 구입 가능 우대가격
+                        </p>
+                    </div>
+                </div>
+            <!-- <div id="top_btn"></div> -->
+        </section>
+        <!-- <div class="topbox">
+            <div style="cursor:pointer;" onclick="window.scrollTo(0,0);" class="top">TOP</div>
+        </div> -->
+        <footer>
+            <div class="foot_img">
+                <img src="img/twitter.png" alt="">
+                <img src="img/facebook.png" alt="">
+                <img src="img/instagram.png" alt="">
+            </div>
+            <div class="foot_container">
+                <div class="foot_logo">
+                    <a href="index.html"><img src="img/logo.png" alt="" width="230" height="230" ></a>
+                </div>
+            <div class="link_up">
+                <h2>Link</h2>
+                    <div class="link">
+                        <p><a href="#">요금&프로모션</a></p>
+                        <p><a href="#">이용정보</a></p>
+                        <p><a href="#">즐길거리</a></p>
+                        <p><a href="#">멤버십</a></p>
+                        <p><a href="#">에버랜드 더 알아보기</a></p>
+                    </div>
+            </div>
+            <div class="information_up">
+                <h2>Information</h2>
+                    <div class="information">
+                        <p><a href="#">에버랜드 리조트 소개</a></p>
+                        <p><a href="#">이용약관</a></p>
+                        <p><a href="#">이메일주소 무단수집 거부</a></p>
+                        <p><a href="#">채용</a></p>
+                        <p><a href="#">캐스트참여</a></p>
+                    </div>
+            </div>
+            <div class="contact_up">
+                <h2>Contact</h2>
+                    <div class="contact">
+                        <p><a href="#">031-320-5000(유료)</a></p>
+                        <!-- <p><a href="#">경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)</a></p> -->
+                        <p><a href="#">개인정보처리방침</a></p>
+                        <p><a href="#">방침 개정 안내</a></p>
+                        <p><a href="#">입찰공고</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
