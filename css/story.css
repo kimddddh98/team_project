@@ -1,0 +1,164 @@
+.sub_top {
+  width: 100%;
+  height: 500px;
+  clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+  background: 
+  url("../img/back_logo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: 
+  inset 0 0 0 400px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.sub_top_text {
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 70%;
+  left: 50%;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+.sub_top_text span {
+  font-size: 0.8em;
+}
+.slider {width:100%;  height: 700px; position: relative;}
+.slider img {width: 500px; height: 600px; margin-left: 65px; margin-top: 50px; float: left;}
+.slider img:nth-of-type(2){float: right; margin-top: 50px; width: 500px; height: 600px; margin-right: 65px;}
+.slider h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 43px;}
+
+.btnbox {width: 1200px; height: 120px; margin: 0 auto; display: flex; justify-content: space-evenly; align-items: center; }
+.btnbox button {width: 150px; height: 50px; border: none; background-color: white; font-size: 25px; width: 200px; cursor: pointer;}
+/* 버튼 박스 내용 */
+.story1 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto; }
+.story1 h1 { font-size: 50px; color: #aaa; margin-bottom: 50px; }
+.story1 p { margin: 15px 0 15px 0; font-size: 23px; margin-bottom:  70px;}
+.story1 img {width: 100%; height: 450px; margin-bottom:  50px;}
+.story1 h3 { color: #aaa; font-size: 30px; margin: 30px 0 40px 0; }
+.story1 span { font-size: 18px; }
+
+/* 사진 넘어가는 버튼 */
+.imgbox { width:1100px; height: 500px; margin: 20px auto 0; overflow: hidden; position: relative; }    
+.arrow{ width: 6600px; height: 500px;}
+.arrow li{ width: 1100px; height: 500px; float: left; } 
+.arrow li img{ width: 100%; height: 100%; }
+.imgbox span{ position: absolute; top: 50%; display: block; font-size: 38px;
+color: #fff; line-height: 40px; cursor: pointer;
+height: 50px; transform: translateY(-50%);}
+.imgbox span:hover{
+  background-color: #ff6636;}
+.prev{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
+.next{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
+
+/* 지도 */
+.story1 h2 {color: #aaa; font-size: 30px; margin: 80px 0 50px 0;}
+.story1 iframe {width: 90%; height: 450px;}
+
+
+
+/* 2번째 아메리칸 어드벤처 */
+.story2 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto;display: none;}
+.story2 h1 { font-size: 50px; color: #aaa; margin-bottom: 50px; }
+.story2 p { margin: 15px 0 15px 0; font-size: 23px; margin-bottom: 70px;}
+.story2 img {width: 100%; height: 450px; margin-bottom: 50px;}
+.story2 h3 { color: #aaa; font-size: 30px; margin: 30px 0 40px 0; }
+.story2 span { font-size: 18px; }
+
+/* 사진 넘어가는 버튼 */
+.imgbox2 {width:1100px; height: 500px; margin: 20px auto 0; position: relative; overflow: hidden; }    
+.arrow2{ width: 6600px; height: 500px;}
+.arrow2 li{ width: 1100px; height: 500px; float: left; } 
+.arrow2 li img{ width: 100%; height: 100%; }
+.imgbox2 span{ position: absolute; top: 50%; display: block; font-size: 38px;
+color: #fff; line-height: 40px; cursor: pointer;
+height: 50px; transform: translateY(-50%);}
+.imgbox2 span:hover{
+  background-color: #ff6636;}
+.prev2{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
+.next2{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
+
+/* 지도 */
+.story2 h2 {color: #aaa; font-size: 30px; margin: 80px 0 50px 0;}
+.story2 iframe {width: 90%; height: 450px;}
+
+ /* 3번째 매직 랜드 */
+ .story3 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto; display: none;}
+.story3 h1 { font-size: 50px; color: #aaa; margin-bottom: 50px;}
+.story3 p { margin: 15px 0 15px 0; font-size: 23px; margin-bottom: 70px;}
+.story3 img {width: 100%; height: 450px;  margin-bottom: 50px;}
+.story3 h3 { color: #aaa; font-size: 30px; margin: 30px 0 40px 0; }
+.story3 span { font-size: 18px; }
+
+/* 사진 넘어가는 버튼 */
+.imgbox3 {width:1100px; height: 500px; margin: 20px auto 0; position: relative; overflow: hidden; }    
+.arrow3{ width: 6600px; height: 500px;}
+.arrow3 li{ width: 1100px; height: 500px; float: left; } 
+.arrow3 li img{ width: 100%; height: 100%; }
+.imgbox3 span{ position: absolute; top: 50%; display: block; font-size: 38px;
+color: #fff; line-height: 40px; cursor: pointer;
+height: 50px; transform: translateY(-50%);}
+.imgbox3 span:hover{
+  background-color: #ff6636;}
+.prev3{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
+.next3{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
+
+/* 지도 */
+.story3 h2 {color: #aaa; font-size: 30px; margin: 80px 0 50px 0;}
+.story3 iframe {width: 90%; height: 450px;}
+
+
+/* 4번째 매직 랜드 */
+.story4 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto;display: none;}
+.story4 h1 { font-size: 50px; color: #aaa;  margin-bottom: 50px;}
+.story4 p { margin: 15px 0 15px 0; font-size: 23px; margin-bottom: 70px;}
+.story4 img {width: 100%; height: 450px;  margin-bottom: 50px;}
+.story4 h3 { color: #aaa; font-size: 30px; margin: 30px 0 40px 0; }
+.story4 span { font-size: 18px; }
+
+/* 사진 넘어가는 버튼 */
+.imgbox4 {width:1100px; height: 500px; margin: 20px auto 0; position: relative; overflow: hidden; }    
+.arrow4{ width: 6600px; height: 500px;}
+.arrow4 li{ width: 1100px; height: 500px; float: left; } 
+.arrow4 li img{ width: 100%; height: 100%; }
+.imgbox4 span{ position: absolute; top: 50%; display: block; font-size: 38px;
+color: #fff; line-height: 40px; cursor: pointer;
+height: 50px; transform: translateY(-50%);}
+.imgbox4 span:hover{
+  background-color: #ff6636;}
+.prev4{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
+.next4{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
+
+/* 지도 */
+.story4 h2 {color: #aaa; font-size: 30px; margin: 80px 0 50px 0;}
+.story4 iframe {width: 90%; height: 450px;}
+
+
+/* 5번째 주토피아 */
+.story5 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto;display: none;}
+.story5 h1 { font-size: 50px; color: #aaa;  margin-bottom: 50px;}
+.story5 p { margin: 15px 0 15px 0; font-size: 23px;  margin-bottom: 70px;}
+.story5 img {width: 100%; height: 450px;  margin-bottom: 50px;}
+.story5 h3 { color: #aaa; font-size: 30px; margin: 30px 0 40px 0; }
+.story5 span { font-size: 18px; }
+
+/* 사진 넘어가는 버튼 */
+.imgbox5 {width:1100px; height: 500px; margin: 20px auto 0; position: relative; overflow: hidden; }    
+.arrow5{ width: 6600px; height: 500px;}
+.arrow5 li{ width: 1100px; height: 500px; float: left; } 
+.arrow5 li img{ width: 100%; height: 100%; }
+.imgbox5 span{ position: absolute; top: 50%; display: block; font-size: 38px;
+color: #fff; line-height: 40px; cursor: pointer;
+height: 50px; transform: translateY(-50%);}
+.imgbox5 span:hover{
+  background-color: #ff6636;}
+.prev5{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
+.next5{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
+
+/* 지도 */
+.story5 h2 {color: #aaa; font-size: 30px; margin: 80px 0 50px 0;}
+.story5 iframe {width: 90%; height: 450px;}
