@@ -347,8 +347,8 @@ section{
     padding:10px 20px;
     background-color:#eee;
     color:black;
-}
-#promotion > .button_box > .sub_btnbox> button:hover{
+}                                                                           /* ,다음 active는 추가 클래스를 추가해주는 방법 */
+#promotion > .button_box > .sub_btnbox> button:hover , #promotion > .button_box > .sub_btnbox> button.active{
     background-color:#ff6633;
     color:white;
     cursor:pointer;

@@ -121,13 +121,13 @@
         </div>
     </div>
     <div class="quickmenu">
-            <div class="scroll1"  onscroll="mFunc()" onclick="onday()">
+            <div class="scroll1"  onscroll="mFunc()" onclick="onday()" display="none">
                 <span>종일권</span>
             </div>
-            <div class="scroll2"  onscroll="mFunc()" onclick="oneyear()">
+            <div class="scroll2"  onscroll="mFunc()" onclick="oneyear()" display="none">
                 <span>연간 이용</span>
             </div>
-            <div class="scroll3"  onscroll="mFunc()" onclick="promo()">
+            <div class="scroll3"  onscroll="mFunc()" onclick="promo()" display="none">
                 <span>프로모션</span>
             </div>
     </div>     
@@ -178,18 +178,21 @@
                     <div class="intro">
                         <h3>365 스탠다드</h3>
                             <p>상품소개</p>
+                                <div class="info_shop">
                                 <span>- 365일 언제나 사용가능</span>
-                    </div>
-                    <div class="out"><p>가격</p>
-                        <span>구분</span>
-                        <span>신규</span>
-                        <span>재가입</span>
+                            </div>
+                        </div>
+                    <div class="out">
+                        <p>가격</p>
+                            <span>구분</span>
+                            <span>신규</span>
+                            <span>재가입</span>
                     </div>
                     <div class="last">
-                        <span>대인/<br>
-                            청소년</span>
-                        <span>260,000</span>
-                        <span>210,000</span>
+                            <span>대인/<br>
+                                청소년</span>
+                            <span>260,000</span>
+                            <span>210,000</span>
                         <span>소인<Br>
                             (만3세~12세)</span>
                         <span>220,000</span>
@@ -203,8 +206,10 @@
                     <div class="intro">
                         <h3>365 시니어</h3>
                             <p>상품소개</p>
+                            <div class="info_shop">
                                 <span>- 365일 이용가능</span>
                                 <span>- 만60세 이상 가입</span>
+                            </div>
                     </div>
                     <div class="out"><p>가격</p>
                         <span>구분</span>
@@ -224,10 +229,12 @@
                     <div class="intro">
                         <h3>365 베이비</h3>
                             <p>상품소개</p>
-                                <span>- 365일 이용가능</span>
-                                <span>- 24개월~35개월 가입</span>
-                                <span>(36개월 생일 전까지)</span>
+                            <div class="info_shop">
+                                <span>- 365일 이용가능</span><br>
+                                <span>- 24개월~35개월 가입</span><br>
+                                <span>(36개월 생일 전까지)</span><br>
                                 <span>- 생애 1회 Only</span>
+                            </div>
                     </div>
                     <div class="out"><p>가격</p>
                         <span>구분</span>
@@ -235,7 +242,8 @@
                         <span>재가입</span>
                     </div>
                     <div class="last last3">
-                        <span>24개월~35개월<br>
+                        <span style="font-size:14px;">24개월~35개월<br>
+                            <div class="info_shop"></div>
                             (36개월 생일 전까지)</span>
                         <span>80,000</span>
                         <span>&nbsp;</span>
@@ -249,7 +257,9 @@
                     <div class="intro">
                         <h3>350 스탠다드</h3>
                             <p>상품소개</p>
+                            <div class="info_shop">
                                 <span>- 약 350일 이용가능&nbsp;&nbsp;(주요연휴기간 제외) </span>
+                            </div>
                     </div>
                     <div class="out"><p>가격</p>
                         <span>구분</span>
@@ -273,7 +283,9 @@
                     <div class="intro">
                         <h3>320 셀렉트</h3>
                             <p>상품소개</p>
+                            <div class="info_shop">
                                 <span>- 약 320일 이용가능&nbsp;&nbsp;(D기간 이용불가)</span>
+                            </div>
                     </div>
                     <div class="out"><p>가격</p>
                         <span>구분</span>
@@ -298,7 +310,7 @@
                     <div class="intro">
                         <h3>250 위크데이</h3>
                             <p>상품소개</p>
-                            <div class="year_info">
+                            <div class="year_info info_shop">
                                 <span>- 약 250일 이용가능&nbsp;&nbsp;(주말,휴일 이용불가)</span>
                             </div>
                     </div>
@@ -321,11 +333,11 @@
                 </div>
             </div>
             <div id="main4"></div>
-            <div id="promotion">
+                <div id="promotion">
                         <h2>프로모션</h2>
                             <div class="button_box">
                                 <div class="sub_btnbox">
-                                    <button class="btn sub_btn1 flipped" onclick="Buttontoggle();">전체</button>
+                                    <button class="btn sub_btn1 active" onclick="Buttontoggle();">전체</button>
                                     <button class="btn sub_btn2 " onclick="Buttontoggle();">일반</button>
                                     <button class="btn sub_btn3 " onclick="Buttontoggle();">유아동반가족</button>
                                     <button class="btn sub_btn4 " onclick="Buttontoggle();">초/중/고 동반 가족</button>

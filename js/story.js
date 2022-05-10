@@ -108,7 +108,11 @@ $(function () {
     });
 
     // 버튼 스토리 이동
+    $('button:nth-of-type(1)').addClass('active');
+
     $('button:nth-of-type(1)').click(function () {
+        $("button").removeClass('active');
+        $(this).addClass('active');
         $(".story1").fadeIn();
         $(".story2").hide();
         $(".story3").hide();
@@ -117,6 +121,8 @@ $(function () {
     });
 
     $('button:nth-of-type(2)').click(function () {
+        $("button").removeClass('active');
+        $(this).addClass('active');
         $(".story2").fadeIn();
         $(".story1").hide();
         $(".story3").hide();
@@ -125,6 +131,8 @@ $(function () {
     });
 
     $('button:nth-of-type(3)').click(function () {
+        $("button").removeClass('active');
+        $(this).addClass('active');
         $(".story3").fadeIn();
         $(".story1").hide();
         $(".story2").hide();
@@ -133,6 +141,8 @@ $(function () {
     });
 
     $('button:nth-of-type(4)').click(function () {
+        $("button").removeClass('active');
+        $(this).addClass('active');
         $(".story4").fadeIn();
         $(".story1").hide();
         $(".story2").hide();
@@ -141,6 +151,8 @@ $(function () {
     });
 
     $('button:nth-of-type(5)').click(function () {
+        $("button").removeClass('active');
+        $(this).addClass('active');
         $(".story5").fadeIn();
         $(".story1").hide();
         $(".story2").hide();
