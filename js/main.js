@@ -97,9 +97,12 @@ $(function(){
 
 var time=new Date();
 var count= new Date(time.getFullYear(),time.getMonth(),time.getDate(),22,00,00);
+var ot=new Date(time.getFullYear(),time.getMonth(),time.getDate(),10,00,00);
+
 var x= setInterval(function(){
 var now= new Date().getTime();
 var distance=count-now;
+var sss=ot-now;
 
 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -111,6 +114,23 @@ if(seconds<10){seconds="0"+seconds}
 document.getElementById('hour').innerHTML=hours;
 document.getElementById('min').innerHTML=minutes;
 document.getElementById('sec').innerHTML=seconds;
+document.getElementById('open').innerHTML="금일 남은 운영시간";
+
+if(now<ot){
+
+    var days = Math.floor(sss / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((sss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((sss % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((sss % (1000 * 60)) / 1000);
+    if(hours<10){hours="0"+hours}
+    if(minutes<10){minutes="0"+minutes}
+    if(seconds<10){seconds="0"+seconds}
+    document.getElementById('hour').innerHTML=hours;
+    document.getElementById('min').innerHTML=minutes;
+    document.getElementById('sec').innerHTML=seconds;
+    document.getElementById('open').innerHTML="금일 오픈까지 남은시간";
+
+}
 if(distance<0){
     clearInterval(x);
     document.getElementById('timer').innerHTML="금일 마감"

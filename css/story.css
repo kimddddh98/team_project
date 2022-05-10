@@ -27,6 +27,8 @@
 .sub_top_text span {
   font-size: 0.8em;
 }
+
+
 .slider {width:100%;  height: 700px; position: relative;}
 .slider img {width: 500px; height: 600px; margin-left: 65px; margin-top: 50px; float: left;}
 .slider img:nth-of-type(2){float: right; margin-top: 50px; width: 500px; height: 600px; margin-right: 65px;}
@@ -34,6 +36,7 @@
 
 .btnbox {width: 1200px; height: 120px; margin: 0 auto; display: flex; justify-content: space-evenly; align-items: center; }
 .btnbox button {width: 150px; height: 50px; border: none; background-color: white; font-size: 25px; width: 200px; cursor: pointer;}
+
 /* 버튼 박스 내용 */
 .story1 {text-align: center; width: 1200px; height: 2600px; margin: 0 auto; }
 .story1 h1 { font-size: 50px; color: #aaa; margin-bottom: 50px; }
@@ -49,9 +52,9 @@
 .arrow li img{ width: 100%; height: 100%; }
 .imgbox span{ position: absolute; top: 50%; display: block; font-size: 38px;
 color: #fff; line-height: 40px; cursor: pointer;
-height: 50px; transform: translateY(-50%);}
+height: 50px; transform: translateY(-50%); background-color: #ff6636;}
 .imgbox span:hover{
-  background-color: #ff6636;}
+  background-color: transparent;}
 .prev{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
 .next{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
 
@@ -73,12 +76,11 @@ height: 50px; transform: translateY(-50%);}
 .imgbox2 {width:1100px; height: 500px; margin: 20px auto 0; position: relative; overflow: hidden; }    
 .arrow2{ width: 6600px; height: 500px;}
 .arrow2 li{ width: 1100px; height: 500px; float: left; } 
-.arrow2 li img{ width: 100%; height: 100%; }
+.arrow2 li img{ width: 100%; height: 100%;  }
 .imgbox2 span{ position: absolute; top: 50%; display: block; font-size: 38px;
 color: #fff; line-height: 40px; cursor: pointer;
-height: 50px; transform: translateY(-50%);}
-.imgbox2 span:hover{
-  background-color: #ff6636;}
+height: 50px; transform: translateY(-50%); background-color: #ff6636;}
+.imgbox2 span:hover{ background-color: transparent;}
 .prev2{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
 .next2{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
 
@@ -101,9 +103,9 @@ height: 50px; transform: translateY(-50%);}
 .arrow3 li img{ width: 100%; height: 100%; }
 .imgbox3 span{ position: absolute; top: 50%; display: block; font-size: 38px;
 color: #fff; line-height: 40px; cursor: pointer;
-height: 50px; transform: translateY(-50%);}
+height: 50px; transform: translateY(-50%); background-color: #ff6636;}
 .imgbox3 span:hover{
-  background-color: #ff6636;}
+  background-color: transparent;}
 .prev3{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
 .next3{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
 
@@ -127,9 +129,9 @@ height: 50px; transform: translateY(-50%);}
 .arrow4 li img{ width: 100%; height: 100%; }
 .imgbox4 span{ position: absolute; top: 50%; display: block; font-size: 38px;
 color: #fff; line-height: 40px; cursor: pointer;
-height: 50px; transform: translateY(-50%);}
+height: 50px; transform: translateY(-50%); background-color: #ff6636;}
 .imgbox4 span:hover{
-  background-color: #ff6636;}
+  background-color: transparent;}
 .prev4{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
 .next4{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
 
@@ -153,9 +155,9 @@ height: 50px; transform: translateY(-50%);}
 .arrow5 li img{ width: 100%; height: 100%; }
 .imgbox5 span{ position: absolute; top: 50%; display: block; font-size: 38px;
 color: #fff; line-height: 40px; cursor: pointer;
-height: 50px; transform: translateY(-50%);}
+height: 50px; transform: translateY(-50%); background-color: #ff6636;}
 .imgbox5 span:hover{
-  background-color: #ff6636;}
+  background-color: transparent;}
 .prev5{ left: 0; border-radius: 0px 10px 10px 0; padding: 0 8px 0 2px; }
 .next5{ right: 0; border-radius: 10px 0 0 10px; padding: 0 2px 0 8px; }
 

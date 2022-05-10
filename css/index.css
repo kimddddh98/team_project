@@ -1,4 +1,15 @@
 @charset "utf-8";
+#video{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+}
+video{
+  width: 100%;
+
+  filter: grayscale(50%);
+}
 #tex{
   display: flex;
   flex-direction: column;
@@ -33,18 +44,19 @@ color: #fff;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  margin:30px 0;
 }
 .slied{
   position: absolute;
   left: 0;
-  top:30px;
+  top:0;
   width: 6000px;
   height: 400px;
   transition: left 0.5s ease-out;
   display: flex;
 }
 .slied li:nth-of-type(4) img{
-  object-fit: fill;
+  object-fit: cover;
 }
 .slied li img{
   width: 1200px;
@@ -63,6 +75,8 @@ object-fit:cover;
   cursor: pointer;
   top: 50%;
   transform: translatey(-50%);
+  font-weight: bold;
+  padding: 5px 10px;
 }
 #slider .prev{
   left: 10px;
@@ -98,7 +112,8 @@ object-fit:cover;
 }
 #best>h1{
   text-align: center;
-  margin:30px 0
+  margin:30px 0;
+  font-family: 'Noto Sans';
   
 }
 
@@ -121,38 +136,46 @@ object-fit:cover;
   height: 100%;
   opacity: 0.6;
 object-fit: cover;
+  filter:brightness(75%) ;
 
 }
 #top a{
-  color:#000;
+  color:#fff;
   font-size: 30px;
   margin-left: -300px;
   z-index: 2;
+  font-family: 'Noto Sans';
+
 }
 #top div:hover img{
   transform: scale(1.1);
-  transition: all 1s;
+  transition: all 1.2s ;
   opacity: 1;
+filter:brightness(95%) ;
+
 }
 #top div:hover a{
   color: #fff;
+
 }
 #mid div:hover a{
   color: #fff;
 }
 #mid div:hover img{
   transform: scale(1.1);
-  transition: all 1s;
+  transition: all 1.2s;
   opacity: 1;
-  cursor: pointer;
+filter:brightness(95%) ;
+
   
 
 }
 #mid a{
-  color:#000;
+  color:#fff;
   font-size: 30px;
   margin-left: -200px;
   z-index: 2;
+  font-family: 'Noto Sans';
 
 }
 #best6>a{
@@ -163,6 +186,8 @@ object-fit: cover;
   height: 100%;
   opacity: 0.6;
 object-fit: cover;
+filter:brightness(75%) ;
+
 
 }
 #mid{
@@ -175,6 +200,8 @@ object-fit: cover;
   display: flex;
   align-items: center;
   overflow: hidden;
+  cursor: pointer;
+
 }
 #best3{
   width:350px;
@@ -198,7 +225,7 @@ object-fit: cover;
 #timeimg{
   width: 100%;
   height: 500px;
-  margin: 50px 0;
+  margin: 100px 0 80px 0;
   background-image: url('../img/time.jpg'),url('../img/timer.jpg'),url('../img/time3.jpg');
   background-repeat: no-repeat,no-repeat;
   background-size: 30% 500px,70% 500px,100% 500px
@@ -306,6 +333,8 @@ object-fit: cover;
 #news h1{
   text-align: center;
   flex-basis: 100%;
+  font-family: 'Noto Sans';
+
 }
 #news>div{
   width: 350px;
@@ -318,7 +347,7 @@ object-fit: cover;
   justify-content: space-between;
   padding: 10px 10px;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #news h3{
