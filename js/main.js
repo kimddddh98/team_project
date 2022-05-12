@@ -40,19 +40,11 @@ $(function(){
         $("#paradeone").css("animation-name","parade");
         $("#paradeone").css("animation-duration","1.5s");
         $("#paradeone").css("animation-fill-mode","both");
-
-        // $(".pimg").css("animation-iteration-count","infinite");
-
-
     },function(){
         $("#paradetwo").css("opacity","1");
         $("#paradethree").css("opacity","1");
         $("#paradeone p").hide();
         $("#paradeone").css("animation","none");
-
-        // $(".pimg").css("height","450px");
-
-
     }
     );
     $("#paradetwo").hover(function(){

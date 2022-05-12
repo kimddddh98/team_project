@@ -1,4 +1,38 @@
-
+$(function(){
+    $(window).scroll(function(){
+        var video=document.getElementById("slider").clientHeight;
+        var height=video-300;
+        var max= document.getElementsByTagName("body")[0].clientHeight; 
+        var scroll=$(window).scrollTop();
+        if(scroll>height){
+            $("#container").css("background","#fff");
+            $(".mainmenu>li>a").css("color","#333");
+            $(".sub>li>a").css("color","#333");
+            $(".sub").css("background","#fff");
+            $("#search>div a").css("color","#666");
+        }
+        else{
+            $("#container").css("background","none");
+            $(".mainmenu>li>a").css("color","#fff");
+            $(".sub>li>a").css("color","#fff");
+            $(".sub").css("background","none");
+            $("#search>div a").css("color","#fff");
+        }
+    })
+    $("#searchfour").click(function(){
+        $(".hide").hide();
+        $("#hidesearch").show();
+        $("#search>div").css("border","none");
+        $("#search").css("justify-content","flex-end");
+    });
+    $("#close").click(function(){
+        $(".hide").show();
+        $("#hidesearch").hide();
+        $("#search>div").css("border-right","1px solid #000");
+        $("#searchfour").css("border-right","none");
+        $("#search").css("justify-content","space-between");
+    });
+});
 
 $(function(){
     $('#semi_info').click(function(){
